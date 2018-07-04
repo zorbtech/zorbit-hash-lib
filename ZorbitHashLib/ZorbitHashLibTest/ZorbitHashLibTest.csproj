@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NBitcoin" Version="4.1.1.20" />
+  </ItemGroup>
+  <ItemGroup>
+    <dependencies Include="..\Dependencies\**\*.*" />
+  </ItemGroup>
+  <Target Name="NativeDepsBuild" AfterTargets="Build">
+    <Copy SourceFiles="@(dependencies)" DestinationFiles="@(dependencies->'$(OutputPath)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+  <Target Name="NativeDepsPublish" AfterTargets="Publish">
+    <Copy SourceFiles="@(dependencies)" DestinationFiles="@(dependencies->'$(PublishDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+</Project>

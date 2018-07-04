@@ -1,48 +1,22 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata minClientVersion="2.5">
-        <!-- The identifier that must be unique within the hosting gallery -->
         <id>Zorbit.Hashlib.Test</id>
-
-        <!-- The package version number that is used when resolving dependencies -->
         <version>0.0.1-beta</version>
-
-        <!-- Authors contain text that appears directly on the gallery -->
         <authors>Zorbit</authors>
-
-        <!-- 
-            Owners are typically nuget.org identities that allow gallery
-            users to easily find other packages by the same owners.  
-        -->
         <owners>zorbit</owners>
-
-         <!-- License and project URLs provide links for the gallery -->
+        <packageTypes>
+          <packageType name="Dependency"/>
+        </packageTypes>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/zorbtech/zorbit-hash-lib</projectUrl>
-
-        <!-- The icon is used in Visual Studio's package manager UI -->
         <iconUrl>http://github.com/contoso/UsefulStuff/nuget_icon.png</iconUrl>
-
-        <!-- 
-            If true, this value prompts the user to accept the license when
-            installing the package. 
-        -->
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-
-        <!-- Any details about this particular release -->
         <releaseNotes>Initial test version to aid management of dependencies</releaseNotes>
-
-        <!-- 
-            The description can be used in package manager UI. Note that the
-            nuget.org gallery uses information you add in the portal. 
-        -->
         <description>Zorbit Hashing Libraries</description>
-
         <references>
-          <reference file="ZorbitHashLib.dll">
+          <reference file="ZorbitHashLib.dll" />
         </references>
-
-        <!-- Tags appear in the gallery and can be used for tag searches -->
         <tags>blockchain hashing</tags>
     </metadata>
 
