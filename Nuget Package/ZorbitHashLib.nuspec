@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata minClientVersion="2.5">
         <id>Zorbit.Hashlib.Test</id>
-        <version>0.0.1-beta</version>
+        <version>0.0.2-alpha</version>
         <authors>Zorbit</authors>
         <owners>zorbit</owners>
         <packageTypes>
@@ -21,7 +21,7 @@
     </metadata>
 
     <files>
-        <file src="lib\*.*" target="lib"/>
+        <file src="lib\netstandard2.0\*.*" target="lib"/>
         <file src="build\ZorbitHashLib.targets" target="build" />
     </files>
 </package>
